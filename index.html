@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation 3d cards</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #fef5ea;
+        }
+        #cards{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center; 
+            padding: 170px 25px ;
+            gap: 40px;
+            
+            #heading{
+                font-size: 30px;
+                font-weight: bold;
+            }
+            #images{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                #ml{
+                    height: 250px;
+                    width: 250px;
+                    border-radius: 5px;                   
+                    margin-right: -60px;
+                    transform-style: preserve-3d;
+                    transform: perspective(400px) rotateY(30deg);
+                    gap: 10px;
+                }
+                #mc{
+                    height: 250px;
+                    width: 250px;
+                    border-radius: 5px; 
+                    z-index: 1;
+                }
+                #mr{
+                    height: 250px;
+                    width: 250px;
+                    border-radius: 5px;                   
+                    margin-left: -60px;
+                    transform-style: preserve-3d;
+                    transform: perspective(400px) rotateY(-30deg);
+                    gap: 10px; 
+                }
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="cards">
+        <div id="heading">Cards</div>
+        <div id="images">
+            <img id="ml" src="./bsl2.jpeg">
+            <img id="ml" src="./bsl4.jpeg">
+            <img id="mc" src="./bsc.jpeg">
+            <img id="mr" src="./bsr3.jpeg">
+            <img id="mr" src="./bsr1.jpeg" style="z-index: -1;">
+        </div>
+    </div>
+</body>
+</html>
